@@ -1,15 +1,140 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap with Vite</title>
-        <script type="module" src="./js/main.js"></script>
-    </head>
-<body>
-<div class="container py-4 px-3 mx-auto">
-    <h1>Hello, Bootstrap and Vite!</h1>
-    <button class="btn btn-primary">Primary button</button>
-</div>
-</body>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>指尖藝術 | 美甲款式欣賞</title>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">💅 Nail Art Gallery</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">最新款式</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">熱門排行</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">預約諮詢</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-light py-5 mb-5 text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold text-secondary">指尖上的微型藝術</h1>
+        <p class="lead text-muted">探索本季最流行的美甲設計，從極簡風格到奢華鑽飾。</p>
+        <a href="#gallery" class="btn btn-primary btn-lg mt-3">瀏覽圖庫</a>
+      </div>
+    </header>
+
+    <div class="container" id="gallery">
+      <div class="text-center mb-5">
+        <button class="btn btn-outline-secondary active me-2">全部</button>
+        <button class="btn btn-outline-secondary me-2">法式指甲</button>
+        <button class="btn btn-outline-secondary me-2">暈染風格</button>
+        <button class="btn btn-outline-secondary">貓眼系列</button>
+      </div>
+
+      <div class="row g-4">
+        
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0 hover-card">
+            <img src="https://placehold.co/600x400/ffb3b3/ffffff?text=French+Style" class="card-img-top" alt="法式美甲">
+            <div class="card-body">
+              <h5 class="card-title">經典法式溫柔款</h5>
+              <p class="card-text text-muted">適合日常通勤，低調顯氣質的裸粉色系。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-danger">熱門</span>
+                <small class="text-muted">設計師: Anna</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0 hover-card">
+            <img src="https://placehold.co/600x400/e6e6fa/555555?text=Marble+Art" class="card-img-top" alt="暈染美甲">
+            <div class="card-body">
+              <h5 class="card-title">薰衣草暈染</h5>
+              <p class="card-text text-muted">夢幻紫色暈染，搭配金箔點綴，仙氣十足。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-secondary">新款</span>
+                <small class="text-muted">設計師: Bell</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0 hover-card">
+            <img src="https://placehold.co/600x400/2f2f2f/ffffff?text=Cat+Eye" class="card-img-top" alt="貓眼美甲">
+            <div class="card-body">
+              <h5 class="card-title">星空貓眼系列</h5>
+              <p class="card-text text-muted">不同角度折射出如同銀河般的光澤，派對首選。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-dark">個性</span>
+                <small class="text-muted">設計師: Cindy</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0 hover-card">
+            <img src="https://placehold.co/600x400/fff0f5/ff69b4?text=Cute+Bear" class="card-img-top" alt="手繪美甲">
+            <div class="card-body">
+              <h5 class="card-title">手繪立體小熊</h5>
+              <p class="card-text text-muted">立體粉雕技術，搭配可愛的格紋底色。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-info text-dark">可愛</span>
+                <small class="text-muted">設計師: Anna</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0 hover-card">
+            <img src="https://placehold.co/600x400/f0f8ff/4682b4?text=Ice+Cube" class="card-img-top" alt="冰塊美甲">
+            <div class="card-body">
+              <h5 class="card-title">夏日透心涼冰塊甲</h5>
+              <p class="card-text text-muted">利用極光紙打造出的透明折射感，清爽度滿分。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-primary">夏日</span>
+                <small class="text-muted">設計師: Bell</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0 hover-card">
+            <img src="https://placehold.co/600x400/ffefd5/8b4513?text=Amber+Style" class="card-img-top" alt="琥珀美甲">
+            <div class="card-body">
+              <h5 class="card-title">秋冬復古琥珀</h5>
+              <p class="card-text text-muted">成熟穩重的琥珀色澤，搭配金邊設計，顯白第一名。</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-warning text-dark">秋冬</span>
+                <small class="text-muted">設計師: Cindy</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-0">© 2024 Nail Art Gallery. All rights reserved.</p>
+        <small class="text-white-50">Designed with Vite & Bootstrap</small>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
 </html>

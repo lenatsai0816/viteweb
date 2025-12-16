@@ -1,2 +1,41 @@
-// Import all of Bootstrap's CSS
+/* style.scss */
+
+// 1. 在引入 Bootstrap 之前，先定義我們要覆蓋的變數 (Variable Overrides)
+// 這裡我們把主色 (Primary) 改成美甲常用的桃紅色
+$primary: #d63384; 
+$secondary: #6c757d;
+$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-bg: #f8f9fa; // 修改網頁背景色
+
+// 你甚至可以打開這些選項來啟用更多 Bootstrap 功能
+$enable-shadows: true; // 啟用陰影
+$enable-gradients: true; // 啟用漸層
+
+// 2. 引入 Bootstrap 的主要 SCSS 檔案
+// Vite 會自動去 node_modules 尋找這個路徑
 @import "bootstrap/scss/bootstrap";
+
+// 3. 接著撰寫我們自定義的樣式 (使用 SCSS 的巢狀寫法)
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  // SCSS 的巢狀寫法 (& 代表上一層選擇器)
+  &:hover {
+    transform: translateY(-5px);
+    // 因為上面開啟了 $enable-shadows，Bootstrap 會有內建陰影變數，這裡我們自定義更深的
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important; 
+    cursor: pointer;
+  }
+}
+
+// 範例：自定義一個特定區塊的樣式
+.navbar-brand {
+  font-size: 1.5rem;
+  // 使用 Bootstrap 的變數函數來微調顏色
+  color: tint-color($primary, 20%) !important; 
+}
