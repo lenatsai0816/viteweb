@@ -39,3 +39,43 @@ $enable-gradients: true; // 啟用漸層
   // 使用 Bootstrap 的變數函數來微調顏色
   color: tint-color($primary, 20%) !important; 
 }
+
+// style.scss
+
+/* ... 上面是你原本的代碼 ... */
+
+// --- 新增：AI 生成器區塊樣式 ---
+
+// 1. 定義區塊背景 (模仿截圖中的淺藍色漸層)
+.ai-generator-section {
+  // 使用非常淺的藍色作為基底
+  background: linear-gradient(135deg, #e0f7fa 0%, #f3f4f6 100%);
+  // 為了美觀，可以稍微調整上下間距
+}
+
+// 2. 自定義紫色漸層按鈕
+.btn-purple-gradient {
+  color: #fff;
+  border: none;
+  // 模仿截圖中的紫色漸層 (類似 MediumPurple 到 Orchid)
+  background: linear-gradient(90deg, #ba68c8 0%, #ab47bc 100%);
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #ab47bc 0%, #8e24aa 100%);
+    transform: translateY(-2px); // 懸停時輕微上浮
+    box-shadow: 0 4px 15px rgba(171, 71, 188, 0.4); // 增加紫色光暈
+  }
+
+  // 按下時的效果
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// 3. 針對右側圖片的微調
+.ai-generator-section img {
+    // 讓圖片在手機版稍微有一點圓角和陰影，更有質感
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
